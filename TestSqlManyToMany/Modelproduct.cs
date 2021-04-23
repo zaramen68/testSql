@@ -5,14 +5,7 @@ using System.Linq;
 
 namespace TestSqlManyToMany
 {
-    class MyContextInitializer : CreateDatabaseIfNotExists<Modelproduct>
-    {
-        protected override void Seed(Modelproduct db)
-        {
-            base.Seed(db);
-
-        }
-    }
+   
 
     public class Modelproduct : DbContext
     {
@@ -25,7 +18,7 @@ namespace TestSqlManyToMany
         public Modelproduct()
             : base("name=Modelproduct")
         {
-            Database.SetInitializer<Modelproduct>(new MyContextInitializer());
+            
         }
 
         // Добавьте DbSet для каждого типа сущности, который требуется включить в модель. Дополнительные сведения 
